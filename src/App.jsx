@@ -56,7 +56,7 @@ const portfolioData = {
         name: 'Music Album Cover: "Celebrate"',
         category: 'Album Art / Flyer Design',
         description: 'Vibrant album cover design for "Celebrate" by Da-musik, featuring a classic microphone against a tropical backdrop to evoke a festive, musical mood. Ideal for digital release and promotional flyers.',
-        src: "src/assets/da-musik.png", // Internal placeholder path
+        src: "/assets/da-musik.png", // Internal placeholder path
         
       },
       {
