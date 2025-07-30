@@ -200,7 +200,7 @@ const App = () => {
                 <div className="row g-5 align-items-center">
                   <div className="col-md-6">
                     <img
-                      src="src/assets/_MG_9607.JPG" 
+                      src="./assets/_MG_9607.JPG" 
                       alt="Oyerinde David"
                       className="img-fluid rounded-circle shadow-lg-custom border border-dark-subtle d-block mx-auto"
                       style={{ width: '300px', height: '300px', objectFit: 'cover' }}
