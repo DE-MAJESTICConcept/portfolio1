@@ -391,9 +391,9 @@ const App = () => {
             onBack={() => setCurrentPage('home')}
           />
         );
-      default:
-        return null; // Should not happen with 'home' as default
-    }
+    //   default:
+    //     return null; // Should not happen with 'home' as default
+    // }
   };
 
   return (
