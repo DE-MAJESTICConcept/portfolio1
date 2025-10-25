@@ -1,150 +1,173 @@
-import React, { useState, useEffect } from 'react';
-import hero from ./assets/_MG_9607.JPG"
+// ✅ portfolioData.js (Vite version)
+import { useState, useEffect } from 'react';
+import daMusik from './assets/da-musik.png';
+import dmDesign from './assets/dm design.png';
+import nacos from './assets/nacos.png';
+import yesCard from './assets/YES.png';
+import socNacos from './assets/soc nacos.png';
+import linkedinCarousel from './assets/linkedin-carousel.png';
+import facebookAds from './assets/royal plate.png';
+import logo from "./assets/logo.png"; 
 
-// --- Portfolio Data ---
-// Consolidated data for all portfolio sections, including categorized projects.
-const portfolioData = {
-  name: 'Oyerinde David',
-  title: 'Graphic Designer & Motion Designer',
-  summary: 'Highly creative and detail-oriented Graphic Designer & Motion Designer with 4 years of experience in crafting visually stunning designs and motion graphics. Proficient in a range of design software, with a strong passion for delivering high-quality work.',
-  contact: {
-    phone: '08145264181',
-    email: 'oyerindedavid9@gmail.com',
+
+// Animation thumbnails and videos
+import an4Thumb from './assets/Screenshot 2025-10-25 160348.png';
+import an4Video from './assets/2024-12-24-230421838.mp4';
+
+import an5Thumb from './assets/Screenshot 2025-10-25 160448.png';
+import an5Video from './assets/Christmas NACOSS.mp4';
+
+import an6Thumb from './assets/Screenshot 2025-10-25 160528.png';
+import an6Video from './assets/lv_0_20241128112346.mp4';
+
+import an7Thumb from './assets/scent by tee.png';
+import an7Video from './assets/VID_20241224_031524_761~2.mp4';
+
+// Example for personal photo (optional)
+import profilePhoto from './assets/_MG_9607.JPG';
+
+export const portfolioData = {
+
+   title: "Creative Graphic & Motion Designer",
+   name: "Oyerinde David",
+
+   Contact: {
+    phone: "+234 814 526 4181",
+    Email: "demajesticfoties@gmail.com",
+    address: "Kwara, Nigeria",
   },
-  experience: [
-    {
-      title: 'Motion Designer',
-      company: 'NACOSS',
-      date: 'June 2024',
-      description: [
-        'Designed and developed motion graphics, animations, and visual effects for various projects, including social media content, event promotions, and brand campaigns.',
-        'Collaborated with the design team to create cohesive visual identities for clients.',
-        'Utilized Adobe Creative Suite, particularly After Effects, Premiere Pro, and Photoshop, to create high-quality motion graphics.',
-      ],
-    },
-    {
-      title: 'Graphic Designer',
-      company: 'De-Majestic Concept',
-      date: 'March 2020',
-      description: [
-        'Designed and developed visual materials, including logos, brochures, posters, and social media graphics, for various clients.',
-        'Worked closely with clients to understand their design needs and preferences.',
-        'Proficiently used Adobe Creative Suite, specifically Photoshop, Illustrator, to create high-quality designs.',
-      ],
-    },
+
+  profilePhoto, // optional — can be used in your About page or header
+
+
+   education: [
+    { degree: "B.Sc. Computer Science", notes: "University of XYZ, 2020–2024" },
+    { degree: "Diploma in Graphic Design", notes: "Creative Hub Academy, 2019–2020" },
+    { degree: "Motion Graphics Masterclass", notes: "Udemy, 2021" },
   ],
 
-  education: [
-    {
-      degree: 'University of Ilorin',
-      notes: '',
-    },
-    {
-      degree: 'Trained with Deji Design',
-      notes: '',
-    },
-  ],
   skills: {
-    graphicDesign: ['Adobe Photoshop', 'Adobe Illustrator'],
-    motionGraphics: ['Adobe After Effects', 'Adobe Premiere Pro'],
-    other: ['Visual Effects', 'Branding and Identity Design', 'Social Media Graphics', 'Print Design (Brochures, Posters, Business Cards)', 'UI/UX Design (Basic knowledge)'],
+    graphicDesign: [
+      "Adobe Photoshop — expert-level proficiency in photo editing and compositing",
+      "Adobe Illustrator — skilled in logo design and vector illustration",
+      "CorelDRAW — experienced in print and branding layouts",
+      "Typography — strong understanding of font pairing and hierarchy",
+      "Color Theory — advanced knowledge of contrast and harmony principles",
+    ],
+
+    motionGraphics: [
+      "Adobe After Effects — professional animation and compositing",
+      "Premiere Pro — video editing and color correction",
+      "Audition — basic audio syncing and sound effects",
+      "Canva & Figma — rapid layout design for marketing visuals",
+    ],
+
+  
+
+  // ✅ Add this block
+  other: [
+    "Team Collaboration and Project Management",
+    "Creative Direction and Storyboarding",
+    "Time Management and Task Prioritization",
+    "Problem Solving and Adaptability",
+    "Client Communication and Presentation Skills",
+  ],
+  
+ 
+
+  
   },
-  // Categorized projects for the new gallery pages
   projects: {
     brandIdentity: [
       {
-            id: 'bi1', // Assuming this is da-musik.jpg
+        id: 'bi1',
         name: 'Music Album Cover: "Celebrate"',
         category: 'Album Art / Flyer Design',
-        description: 'Vibrant album cover design for "Celebrate" by Da-musik, featuring a classic microphone against a tropical backdrop to evoke a festive, musical mood. Ideal for digital release and promotional flyers.',
-        src: "/assets/da-musik.png", // Internal placeholder path
-        
+        description: 'Vibrant album cover design with bold typography and color contrast.',
+        src: daMusik,
       },
       {
-           id: 'bi2', // Assuming this is dm design.jpg
-           name: 'De-Majestic Concept Branding',
-           category: 'Branding & Marketing',
-           description: 'Promotional graphic for "De-Majestic Concept" highlighting their services: Logo Design, Branding, and Flyer Design. Features a modern illustration and clear contact information for marketing campaigns.',
-          src: "src/assets/dm design.png", // Internal placeholder path
-        
+        id: 'bi2',
+        name: 'De-Majestic Concept Branding',
+        category: 'Branding & Marketing',
+        description: 'Promotional branding graphic showcasing creative identity.',
+        src: dmDesign,
       },
       {
         id: 'bi3',
         name: 'Corporate Brochure Layout',
         category: 'Print Design',
-        src: 'src/assets/nacos.png', // Internal placeholder path
-        description: 'Elegant tri-fold brochure showcasing company services and values for client presentations.',
+        description: 'Elegant tri-fold brochure layout for NACOSS Corporate Event.',
+        src: nacos,
       },
       {
-       id: 'bi4', // Assuming this is YES.png (Business Card)
-         name: 'Yosola Electrical Services Business Card',
+        id: 'bi4',
+        name: 'Yosola Electrical Services Business Card',
         category: 'Business Card Design',
-         description: 'Professional business card design for "Yosola Electrical Services," showcasing contact details and key services (Electrical Appliances Maintenance, Installation, Solar Power, CCTV). Designed for clear communication and brand recall.',
-        src: 'src/assets/YES.png', // Internal placeholder path
-
+        description: 'Professional business card design for Yosola Electrical Services.',
+        src: yesCard,
       },
     ],
+
     animations: [
       {
-        id: "an4",
-        title: "Event Teaser - 2024-12-24",
-        thumbnail: "src/assets/animations/2024-12-24-230421838-thumb.png",
-        videoUrl: "src/assets/2024-12-24-230421838.mp4",
-        description: "A dynamic video teaser created for an event held on December 24, 2024, designed to build excitement and attendance."
+        id: 'an4',
+        title: 'Event Teaser - 2024-12-24',
+        thumbnail: an4Thumb,
+        videoUrl: an4Video,
+        description: 'A dynamic video teaser showcasing an upcoming event.',
       },
-
-{
-  id: "an5",
-  title: "Christmas NACOSS Celebration",
-  thumbnail: "src/assets/animations/Christmas-NACOSS-thumb.png",
-  videoUrl: "src/assets/Christmas NACOSS.mp4",
-  description: "A festive animation celebrating Christmas with the NACOSS community, featuring cheerful visuals and holiday themes."
-},
-{
-  id: "an6",
-  title: "Abstract Motion Graphic - lv_0",
-  thumbnail: "src/assets/lv_0_20241128112346-thumb.png",
-  videoUrl: "src/assets/lv_0_20241128112346.mp4",
-  description: "An abstract motion graphic piece, exploring fluid movements and vibrant colors, created on November 28, 2024."
-},
-{
-  id: "an7",
-  title: "Promotional Clip - VID_20241224",
-  thumbnail: "src/assets/animations/VID_20241224_031524_761-2-thumb.png",
-  videoUrl: "src/assets/VID_20241224_031524_761~2.mp4",
-  description: "A short promotional video clip, capturing key highlights and designed for quick engagement, recorded on December 24, 2024."
-}
+      {
+        id: 'an5',
+        title: 'Christmas NACOSS Celebration',
+        thumbnail: an5Thumb,
+        videoUrl: an5Video,
+        description: 'A festive animation celebrating NACOSS Christmas event.',
+      },
+      {
+        id: 'an6',
+        title: 'Abstract Motion Graphic - lv_0',
+        thumbnail: an6Thumb,
+        videoUrl: an6Video,
+        description: 'An abstract motion graphic piece showcasing smooth transitions.',
+      },
+      {
+        id: 'an7',
+        title: 'Promotional Clip - VID_20241224',
+        thumbnail: an7Thumb,
+        videoUrl: an7Video,
+        description: 'A short promotional clip highlighting NACOSS achievements.',
+      },
     ],
+
     socialMediaGraphics: [
       {
-        id: 'sm1', // Assuming this is soc nacos.jpg
-        name: 'NACOSS Data Science Social Media Campaign',
+        id: 'sm1',
+        name: 'NACOSS Data Science Campaign',
         category: 'Social Media Graphics',
-         description: 'Series of engaging social media graphics for NACOSS (National Association of Computer Science Students) promoting Data Science initiatives. Designs focus on "Untapped Potential," "Master Data, Solve Problems," and "Unlock Insights, Drive Decisions" to attract students.',
-        src: "src/assets/soc nacos.png ",//Internal placeholder path
+        description: 'Engaging design promoting NACOSS Data Science Awareness.',
+        src: socNacos,
       },
       {
-        id: "sm2",
-        name: "NACOS Merch Design Challenge Promo",
-        category: "Social Media Graphics",
-        src: "src/assets/nacos.png", // Internal placeholder path
-        description: "Promotional graphic for the 'NACOS is Cooking: Create the Merch Design Challenge,' featuring a t-shirt design and event details to build anticipation and encourage participation."
-
-   
+        id: 'sm2',
+        name: 'NACOS Merch Design Challenge',
+        category: 'Social Media Graphics',
+        description: 'Promotional post encouraging creative merch submissions.',
+        src: nacos,
       },
       {
         id: 'sm3',
         name: 'Facebook Ad Set',
         category: 'Facebook Ads',
-        src: '/assets/social_media/facebook-ads.png', // Internal placeholder path
-        description: 'Creative ad visuals optimized for Facebook, driving clicks and conversions.',
+        description: 'Ad creatives designed for optimized Facebook engagement.',
+        src: facebookAds,
       },
       {
         id: 'sm4',
         name: 'LinkedIn Carousel',
         category: 'LinkedIn',
-        src: '/assets/social_media/linkedin-carousel.png', // Internal placeholder path
-        description: 'Informative and visually appealing carousel posts for professional networking on LinkedIn.',
+        description: 'Professional carousel design tailored for LinkedIn marketing.',
+        src: linkedinCarousel,
       },
     ],
   },
@@ -201,7 +224,7 @@ const App = () => {
                 <div className="row g-5 align-items-center">
                   <div className="col-md-6">
                     <img
-                      src="./assets/_MG_9607.JPG" 
+                      src="public/assets/_MG_9607.JPG" 
                       alt="Oyerinde David"
                       className="img-fluid rounded-circle shadow-lg-custom border border-dark-subtle d-block mx-auto"
                       style={{ width: '300px', height: '300px', objectFit: 'cover' }}
@@ -333,13 +356,13 @@ const App = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon text-gold" style={{ width: '2rem', height: '2rem' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    {portfolioData.contact.phone}
+                    {portfolioData.Contact.phone}
                   </p>
                   <p className="fs-4 fw-bold text-white d-flex align-items-center justify-content-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon text-gold" style={{ width: '2rem', height: '2rem' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6v4m0 0H9m3 0h3m-6-10h6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z" />
                     </svg>
-                    <a href={`mailto:${portfolioData.contact.email}`} className="text-white hover-gold text-decoration-none">{portfolioData.contact.email}</a>
+                    <a href={`mailto:${portfolioData.Contact.Email}`} className="text-white hover-gold text-decoration-none">{portfolioData.Contact.Email}</a>
                   </p>
                 </div>
               </div>
@@ -470,7 +493,18 @@ const App = () => {
       {/* Header/Navbar */}
       <header className="navbar navbar-expand-lg bg-dark sticky-top shadow-custom border-bottom border-dark-subtle py-3">
         <div className="container-fluid container-xl">
-          <a className="navbar-brand text-gold fs-3 fw-bolder rounded-xl px-3 py-2 hover-gold" href="#" onClick={() => setCurrentPage('home')}>David O.</a>
+       <a
+  className="navbar-brand d-flex align-items-center rounded-xl px-3 py-2 hover-gold"
+  href="#"
+  onClick={() => setCurrentPage('home')}
+>
+  <img
+    src={logo}
+    alt="Portfolio Logo"
+    style={{ height: "60px", width: "60px", borderRadius: "50%", objectFit: "cover" }}
+  />
+</a>
+
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
