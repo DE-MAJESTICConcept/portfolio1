@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import hero from ./assets/_MG_9607.JPG"
 
 // --- Portfolio Data ---
 // Consolidated data for all portfolio sections, including categorized projects.
