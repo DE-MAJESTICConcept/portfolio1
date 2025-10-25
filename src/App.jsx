@@ -25,8 +25,7 @@ import an7Video from './assets/VID_20241224_031524_761~2.mp4';
 
 // Example for personal photo (optional)
 import profilePhoto from './assets/_MG_9607.JPG';
-
-export const portfolioData = {
+ const portfolioData = {
 
    title: "Creative Graphic & Motion Designer",
    name: "Oyerinde David",
